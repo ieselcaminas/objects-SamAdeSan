@@ -8,7 +8,7 @@ public class Banco {
     private String nombre;
     private List<Sucursal> sucursal;
 
-    public Banco(int n_ent, String nombre, List<Sucursal> sucursal) {
+    public Banco(int n_ent, String nombre) {
         this.n_ent = n_ent;
         this.nombre = nombre;
         this.sucursal = new ArrayList<>();

@@ -6,13 +6,13 @@ import java.util.List;
 public class Sucursal {
     private int n_suc;
     private String localizacion;
-    private List<Banco> banco;
+    private List<Banco> bancos;
     private List<Prestamo> prestamos;
 
-    public Sucursal(int n_suc, String localizacion, List<Banco> banco) {
+    public Sucursal(int n_suc, String localizacion, Banco banco) {
         this.n_suc = n_suc;
         this.localizacion = localizacion;
-        this.banco = new ArrayList<>();
+        this.bancos = new ArrayList<>();
         this.prestamos = new ArrayList<>();
     }
 
@@ -33,11 +33,11 @@ public class Sucursal {
     }
 
     public List<Banco> getBanco() {
-        return banco;
+        return bancos;
     }
 
     public void addBanco(Banco banco){
-        this.banco.add(banco);
+        this.bancos.add(banco);
     }
 
     @Override

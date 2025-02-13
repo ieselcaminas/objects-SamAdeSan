@@ -1,5 +1,6 @@
 package EjerciciosPOO.Ejercicio7;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Autor {
@@ -8,15 +9,15 @@ public class Autor {
     private String apellido1;
     private String apellido2;
     private int edad;
-    private List<Libro> autores;
+    private List<Libro> libros;
 
-    public Autor(int id_a, String nombre, String apellido1, String apellido2, int edad, Autor autor) {
+    public Autor(int id_a, String nombre, String apellido1, String apellido2, int edad) {
         this.id_a = id_a;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
         this.edad = edad;
-        this.autores = autores;
+        this.libros = new ArrayList<>();
     }
 
     public int getId_a() {
@@ -58,6 +59,11 @@ public class Autor {
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
+    public void addLibro(Libro libro) {
+        this.libros.add(libro);
+    }
+
     @Override
     public String toString() {
         return this.id_a + " - " + this.nombre + " - " + this.apellido1 + " - " + this.apellido2 + " - " + this.edad;
