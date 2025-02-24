@@ -3,16 +3,16 @@ package herencia.fotografo;
 public class Main {
     public static void main(String[] args) {
         Camara camara = new Camara("Canon");
-        Fotografo pepe = new Fotografo("Victor", camara);
-        pepe.tomarFoto();
+        Fotografo f1 = new Fotografo("Samuel", camara);
+        f1.tomarFoto();
 
         Movil movil = new Movil("Samsung");
-        Fotografo juan = new Fotografo("Antonio", movil);
-        juan.tomarFoto();
+        Fotografo f2 = new Fotografo("Antonio", movil);
+        f2.tomarFoto();
 
-        GoPro goPro = new GoPro("modeloGoPro");
-        Fotografo andres = new Fotografo("Samuel", goPro);
-        andres.tomarFoto();
+        GoPro goPro = new GoPro("123XA");
+        Fotografo f3 = new Fotografo("Jose", goPro);
+        f3.tomarFoto();
 
     }
 }

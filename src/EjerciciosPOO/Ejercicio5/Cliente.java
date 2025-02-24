@@ -6,14 +6,16 @@ import java.util.List;
 public class Cliente {
     private String dni;
     private String nombre;
-    private List<Prestamo> prestamo;
-    private List<CuentaCorriente> cuentaCorriente;
+    private String apellidos;
+    private int edad;
+    private List<Prestamo> prestamos = new ArrayList<>();
+    private List<Cuenta_Corriente> ccs = new ArrayList<>();
 
-    public Cliente(String dni, String nombre) {
+    public Cliente(String dni, String nombre, String apellidos, int edad) {
         this.dni = dni;
         this.nombre = nombre;
-        this.prestamo = new ArrayList<>();
-        this.cuentaCorriente = new ArrayList<>();
+        this.apellidos = apellidos;
+        this.edad = edad;
     }
 
     public String getDni() {
@@ -32,20 +34,40 @@ public class Cliente {
         this.nombre = nombre;
     }
 
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public List<Prestamo> getPrestamos() {
+        return prestamos;
+    }
+
     public void addPrestamo(Prestamo prestamo) {
-        this.prestamo.add(prestamo);
+        prestamos.add(prestamo);
     }
 
-    public List<Prestamo> getPrestamo() {
-        return prestamo;
+    public List<Cuenta_Corriente> getCC() {
+        return ccs;
     }
 
-    public void addCuentaCorriente(CuentaCorriente cuentaCorriente) {
-        this.cuentaCorriente.add(cuentaCorriente);
+    public void addCC(Cuenta_Corriente cuentaCorriente) {
+        ccs.add(cuentaCorriente);
     }
 
     @Override
     public String toString() {
-        return this.dni + " - " + this.nombre;
+        return "Datos del cliente: " + this.dni + ", " + this.nombre + ", " + this.apellidos + ", " + this.edad;
     }
 }

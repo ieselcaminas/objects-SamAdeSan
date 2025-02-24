@@ -1,17 +1,16 @@
 package EjerciciosPOO.SistemaSubastas;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Puja {
     private int n_puj;
-    private int cuantia;
-    private List<Puja> pujas = new ArrayList<>();
-    private List<Pujador> pujadores = new ArrayList<>();
+    private double cuantia;
+    private Pujador pujador;
+    private Lote lote;
 
-    public Puja(int n_puj, int cuantia, Puja puja, Pujador pujador) {
+    public Puja(int n_puj, double cuantia, Pujador pujador, Lote lote) {
         this.n_puj = n_puj;
         this.cuantia = cuantia;
+        this.pujador = pujador;
+        this.lote = lote;
     }
 
     public int getN_puj() {
@@ -22,32 +21,32 @@ public class Puja {
         this.n_puj = n_puj;
     }
 
-    public int getCuantia() {
+    public double getCuantia() {
         return cuantia;
     }
 
-    public void setCuantia(int cuantia) {
+    public void setCuantia(double cuantia) {
         this.cuantia = cuantia;
     }
 
-    public List<Puja> getPujas() {
-        return pujas;
+    public Pujador getPujador() {
+        return pujador;
     }
 
-    public void addPuja(Puja puja) {
-        pujas.add(puja);
+    public void setPujador(Pujador pujador) {
+        this.pujador = pujador;
     }
 
-    public List<Pujador> getPujadores() {
-        return pujadores;
+    public Lote getLote() {
+        return lote;
     }
 
-    public void addPujador(Pujador pujador) {
-        pujadores.add(pujador);
+    public void setLote(Lote lote) {
+        this.lote = lote;
     }
 
     @Override
-    public String toString() {
+    public String toString(){
         return this.n_puj + " - " + this.cuantia;
     }
 }

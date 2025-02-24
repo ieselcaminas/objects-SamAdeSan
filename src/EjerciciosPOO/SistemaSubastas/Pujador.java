@@ -1,20 +1,24 @@
 package EjerciciosPOO.SistemaSubastas;
 
-public class Pujador {
-    private int n_pujador;
-    private String nombre;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Pujador(int n_pujador, String nombre) {
-        this.n_pujador = n_pujador;
+public class Pujador {
+    private int n_puj;
+    private String nombre;
+    private List<Puja> pujas = new ArrayList<>();
+
+    public Pujador(int n_puj, String nombre) {
+        this.n_puj = n_puj;
         this.nombre = nombre;
     }
 
-    public int getN_pujador() {
-        return n_pujador;
+    public int getN_puj() {
+        return n_puj;
     }
 
-    public void setN_pujador(int n_pujador) {
-        this.n_pujador = n_pujador;
+    public void setN_puj(int n_puj) {
+        this.n_puj = n_puj;
     }
 
     public String getNombre() {
@@ -25,8 +29,16 @@ public class Pujador {
         this.nombre = nombre;
     }
 
+    public List<Puja> getPujas() {
+        return pujas;
+    }
+
+    public void addPuja(Puja puja){
+        this.pujas.add(puja);
+    }
+
     @Override
-    public String toString() {
-        return nombre;
+    public String toString(){
+        return this.n_puj + " - " + this.nombre;
     }
 }

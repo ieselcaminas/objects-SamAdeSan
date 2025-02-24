@@ -1,17 +1,15 @@
 package EjerciciosPOO.Ejercicio4;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Libro {
     private String titulo;
     private Autor autor;
-    private List<Tema> tema;
+    private List<Tema> temas;
 
-    public Libro(String titulo, List<Tema> tema, Autor autor) {
+    public Libro(String titulo, Autor autor) {
         this.titulo = titulo;
         this.autor = autor;
-        this.tema = new ArrayList<>();
     }
 
     public String getTitulo() {
@@ -22,14 +20,6 @@ public class Libro {
         this.titulo = titulo;
     }
 
-    public List<Tema> getTema() {
-        return tema;
-    }
-
-    public void setTema(List<Tema> tema) {
-        this.tema = tema;
-    }
-
     public Autor getAutor() {
         return autor;
     }
@@ -38,6 +28,16 @@ public class Libro {
         this.autor = autor;
     }
 
-    public void addTema(){
+    public List<Tema> getTemas() {
+        return temas;
+    }
+
+    public void addTema(Tema tema) {
+        this.temas.add(tema);
+    }
+
+    @Override
+    public String toString() {
+        return "Libro: " + this.titulo + " del autor/a: " + this.autor + ", Temas: " + this.temas;
     }
 }

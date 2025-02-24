@@ -1,25 +1,20 @@
 package EjerciciosPOO.Ejercicio7;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Tema {
-    private int cod_t;
+    private int co_tem;
     private String nombre;
-    private List<Libro> libros;
 
-    public Tema(int cod_t, String nombre) {
-        this.cod_t = cod_t;
+    public Tema(int co_tem, String nombre) {
+        this.co_tem = co_tem;
         this.nombre = nombre;
-        this.libros = new ArrayList<>();
     }
 
-    public int getCod_t() {
-        return cod_t;
+    public int getCo_tem() {
+        return co_tem;
     }
 
-    public void setCod_t(int cod_t) {
-        this.cod_t = cod_t;
+    public void setCo_tem(int co_tem) {
+        this.co_tem = co_tem;
     }
 
     public String getNombre() {
@@ -29,14 +24,9 @@ public class Tema {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    public List<Libro> getLibros() {
-        return libros;
-    }
-    public void addLibro(Libro libro) {
-        this.libros.add(libro);
-    }
+
     @Override
-    public String toString() {
-        return this.cod_t + " - " + this.nombre + " - " + this.libros;
+    public String toString(){
+        return this.nombre;
     }
 }

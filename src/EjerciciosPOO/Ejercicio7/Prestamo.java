@@ -1,40 +1,37 @@
 package EjerciciosPOO.Ejercicio7;
 
-import java.util.Date;
-
 public class Prestamo {
-    private Date data_p;
+    private String fecha_p;
     private Ejemplar ejemplar;
     private Lector lector;
 
-    public Prestamo(Date data_p, Ejemplar ejemplar, Lector lector) {
-        this.data_p = data_p;
+    public Prestamo(String fecha_p, Ejemplar ejemplar, Lector lector) {
+        this.fecha_p = fecha_p;
         this.ejemplar = ejemplar;
         this.lector = lector;
     }
 
-    public Date getData_p() {
-        return data_p;
+    public String getFecha_p() {
+        return fecha_p;
     }
 
-    public void setData_p(Date data_p) {
-        this.data_p = data_p;
+    public void setFecha_p(String fecha_p) {
+        this.fecha_p = fecha_p;
     }
 
     public Ejemplar getEjemplar() {
         return ejemplar;
     }
 
-    public void addEjemplar(Ejemplar ejemplar) {
-
+    public void setEjemplar(Ejemplar ejemplar) {
+        this.ejemplar = ejemplar;
     }
 
     public Lector getLector() {
         return lector;
     }
 
-    public void addLector(Lector lector) {
+    public void setLector(Lector lector) {
         this.lector = lector;
     }
-
 }

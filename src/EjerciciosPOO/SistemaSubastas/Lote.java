@@ -10,17 +10,14 @@ public class Lote {
     private Subasta subasta;
     private List<Puja> pujas = new ArrayList<>();
 
-    public Lote(int n_lot, String nombre) {
+    public Lote(int n_lot, String nombre, Subasta subasta) {
         this.n_lot = n_lot;
         this.nombre = nombre;
+        this.subasta = subasta;
     }
 
     public int getN_lot() {
         return n_lot;
-    }
-
-    public void setN_lot(int n_lot) {
-        this.n_lot = n_lot;
     }
 
     public String getNombre() {
@@ -30,11 +27,12 @@ public class Lote {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public List<Articulo> getArticulos() {
         return articulos;
     }
 
-    public void addArticulo(Articulo articulo) {
+    public void addArticulo(Articulo articulo){
         this.articulos.add(articulo);
     }
 
@@ -50,12 +48,11 @@ public class Lote {
         return pujas;
     }
 
-    public void addPuja(Puja puja) {
+    public void addPuja(Puja puja){
         this.pujas.add(puja);
     }
-
     @Override
-    public String toString() {
-        return this.nombre + " " + this.articulos;
+    public String toString(){
+        return this.n_lot + " - " + this.nombre;
     }
 }

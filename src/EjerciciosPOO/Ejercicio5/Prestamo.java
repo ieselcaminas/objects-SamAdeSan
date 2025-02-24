@@ -1,30 +1,32 @@
 package EjerciciosPOO.Ejercicio5;
 
 public class Prestamo {
-    private int num_prestamo;
-    private int cantidad;
+    private int num_p;
+    private double saldo;
     private Cliente cliente;
+    private Sucursal sucursal;
 
-    public Prestamo(int num_prestamo, int cantidad, Cliente cliente) {
-        this.num_prestamo = num_prestamo;
-        this.cantidad = cantidad;
+    public Prestamo(int num_p, double saldo, Cliente cliente, Sucursal sucursal) {
+        this.num_p = num_p;
+        this.saldo = saldo;
         this.cliente = cliente;
+        this.sucursal = sucursal;
     }
 
-    public int getNum_prestamo() {
-        return num_prestamo;
+    public int getNum_p() {
+        return num_p;
     }
 
-    public void setNum_prestamo(int num_prestamo) {
-        this.num_prestamo = num_prestamo;
+    public void setNum_p(int num_p) {
+        this.num_p = num_p;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public double getSaldo() {
+        return saldo;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
     }
 
     public Cliente getCliente() {
@@ -35,8 +37,16 @@ public class Prestamo {
         this.cliente = cliente;
     }
 
+    public Sucursal getSucursal() {
+        return sucursal;
+    }
+
+    public void setSucursal(Sucursal sucursal) {
+        this.sucursal = sucursal;
+    }
+
     @Override
     public String toString() {
-        return this.num_prestamo + "\t" + this.cantidad + "\t" + this.cliente;
+        return "Préstamo " +  this.num_p + " de un saldo de: " + this.saldo + " del cliente: " + this.cliente + " de la sucursal " + this.sucursal + ".";
     }
 }

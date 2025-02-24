@@ -4,26 +4,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Catedra {
-    private int cod_cat;
+    private int c_cat;
     private String nombre;
-    private List<Departamento> departamento;
-    private List<Facultad> facultad;
-    private List<Profesor> profesor;
+    private List<Departamento> departamentos;
+    private List<Profesor> profesores;
+    private Facultad facultad;
 
-    public Catedra(int cod_cat, String nombre, Departamento departamento, Facultad facultad, Profesor profesor) {
-        this.cod_cat = cod_cat;
+    public Catedra(int c_cat, String nombre, Facultad facultad) {
+        this.c_cat = c_cat;
         this.nombre = nombre;
-        this.departamento = new ArrayList<>();
-        this.facultad = new ArrayList<>();
-        this.profesor = new ArrayList<>();
+        this.facultad = facultad;
+        this.departamentos = new ArrayList<>();
+        this.profesores = new ArrayList<>();
     }
 
-    public int getCod_cat() {
-        return cod_cat;
+    public int getC_cat() {
+        return c_cat;
     }
 
-    public void setCod_cat(int cod_cat) {
-        this.cod_cat = cod_cat;
+    public void setC_cat(int c_cat) {
+        this.c_cat = c_cat;
     }
 
     public String getNombre() {
@@ -34,32 +34,18 @@ public class Catedra {
         this.nombre = nombre;
     }
 
-    public List<Departamento> getDepartamento() {
-        return departamento;
+    public List<Departamento> getDepartamentos() {
+        return departamentos;
+    }
+    public void addDepartamento(Departamento departamento){
+        this.departamentos.add(departamento);
+    }
+    public List<Profesor> getProfesores() {
+        return profesores;
+    }
+    public void addProfesor(Profesor profesor){
+        this.profesores.add(profesor);
     }
 
-    public void addDepartamento(Departamento departamento) {
-        this.departamento.add(departamento);
-    }
 
-    public List<Facultad> getFacultad() {
-        return facultad;
-    }
-
-    public void addFacultad(Facultad facultad) {
-        this.facultad.add(facultad);
-    }
-
-    public List<Profesor> getProfesor() {
-        return profesor;
-    }
-
-    public void addProfesor(Profesor profesor) {
-        this.profesor.add(profesor);
-    }
-
-    @Override
-    public String toString() {
-        return this.cod_cat + " - " + this.nombre + " - " + this.departamento + " - " + this.facultad;
-    }
 }

@@ -4,18 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Banco {
-    private int n_ent;
+    private int idBanco;
     private String nombre;
-    private List<Sucursal> sucursal;
+    private List<Sucursal> sucursales = new ArrayList<>();
 
     public Banco(int n_ent, String nombre) {
-        this.n_ent = n_ent;
+        this.idBanco = n_ent;
         this.nombre = nombre;
-        this.sucursal = new ArrayList<>();
     }
 
-    public int getN_ent() {
-        return n_ent;
+    public int getIdBanco() {
+        return idBanco;
+    }
+
+    public void setIdBanco(int idBanco) {
+        this.idBanco = idBanco;
     }
 
     public String getNombre() {
@@ -26,16 +29,16 @@ public class Banco {
         this.nombre = nombre;
     }
 
-    public List<Sucursal> getSucursal() {
-        return sucursal;
+    public List<Sucursal> getSucursales() {
+        return sucursales;
     }
 
     public void addSucursal(Sucursal sucursal) {
-        this.sucursal.add(sucursal);
+        sucursales.add(sucursal);
     }
 
     @Override
     public String toString() {
-        return this.nombre;
+        return "ID de Banco: " + this.idBanco + " - " + this.nombre + "\tSucursales: " + this.sucursales;
     }
 }

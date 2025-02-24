@@ -17,6 +17,6 @@ public class Camara implements TomarFoto{
 
     @Override
     public void tomarFoto(){
-        System.out.println("Hago una foto con la cámara");
+        System.out.println("Foto con la cámara");
     }
 }

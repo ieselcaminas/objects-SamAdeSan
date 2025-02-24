@@ -5,15 +5,15 @@ import java.util.List;
 
 public class Sucursal {
     private int n_suc;
-    private String localizacion;
-    private List<Banco> bancos;
-    private List<Prestamo> prestamos;
+    private String lugar;
+    private Banco banco;
+    private List<Prestamo> prestamos = new ArrayList<>();
+    private List<Cuenta_Corriente> cc = new ArrayList<>();
 
-    public Sucursal(int n_suc, String localizacion, Banco banco) {
+    public Sucursal(int n_suc, String lugar, Banco banco) {
         this.n_suc = n_suc;
-        this.localizacion = localizacion;
-        this.bancos = new ArrayList<>();
-        this.prestamos = new ArrayList<>();
+        this.lugar = lugar;
+        this.banco = banco;
     }
 
     public int getN_suc() {
@@ -24,24 +24,40 @@ public class Sucursal {
         this.n_suc = n_suc;
     }
 
-    public String getLocalizacion() {
-        return localizacion;
+    public String getLugar() {
+        return lugar;
     }
 
-    public void setLocalizacion(String localizacion) {
-        this.localizacion = localizacion;
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
     }
 
-    public List<Banco> getBanco() {
-        return bancos;
+    public Banco getBanco() {
+        return banco;
     }
 
-    public void addBanco(Banco banco){
-        this.bancos.add(banco);
+    public void setBanco(Banco banco) {
+        this.banco = banco;
+    }
+
+    public List<Prestamo> getPrestamos() {
+        return prestamos;
+    }
+
+    public void addPrestamo(Prestamo prestamo) {
+        prestamos.add(prestamo);
+    }
+
+    public List<Cuenta_Corriente> getCc() {
+        return cc;
+    }
+
+    public void addCuenta(Cuenta_Corriente cuenta) {
+        cc.add(cuenta);
     }
 
     @Override
     public String toString() {
-        return n_suc + " - " + localizacion;
+        return "Sucursal: " + this.n_suc + ", " + this.lugar + ", banco: " + this.banco + "\t Prestamos " + this.prestamos;
     }
 }

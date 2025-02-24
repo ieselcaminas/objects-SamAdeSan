@@ -4,22 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Departamento {
-    private int num_dep;
+    private int n_dep;
     private String nombre;
-    private List<AreaC> area_c;
+    private AreaConocimiento ac;
+    private List<Profesor> profesores;
+    private Catedra catedra;
 
-    public Departamento(int num_dep, String nombre, AreaC area_c) {
-        this.num_dep = num_dep;
+    public Departamento(int n_dep, String nombre, AreaConocimiento ac, Catedra catedra) {
+        this.n_dep = n_dep;
         this.nombre = nombre;
-        this.area_c = new ArrayList<>();
+        this.ac = ac;
+        this.profesores = new ArrayList<>();
+        this.catedra = catedra;
     }
 
-    public int getNum_dep() {
-        return num_dep;
-    }
-
-    public void setNum_dep(int num_dep) {
-        this.num_dep = num_dep;
+    public int getN_dep() {
+        return n_dep;
     }
 
     public String getNombre() {
@@ -30,16 +30,32 @@ public class Departamento {
         this.nombre = nombre;
     }
 
-    public List<AreaC> getArea_c() {
-        return area_c;
+    public AreaConocimiento getAc() {
+        return ac;
     }
 
-    public void addArea_c(AreaC area_c) {
-        this.area_c.add(area_c);
+    public void setAc(AreaConocimiento ac) {
+        this.ac = ac;
+    }
+
+    public void addProfesor(Profesor profesor){
+        this.profesores.add(profesor);
+    }
+
+    public List<Profesor> getProfesores() {
+        return profesores;
+    }
+
+    public Catedra getCatedra() {
+        return catedra;
+    }
+
+    public void setCatedra(Catedra catedra) {
+        this.catedra = catedra;
     }
 
     @Override
-    public String toString() {
-        return this.num_dep + " - " + this.nombre;
+    public String toString(){
+        return "Dep: " + this.nombre;
     }
 }

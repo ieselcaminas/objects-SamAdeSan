@@ -1,40 +1,50 @@
 package EjerciciosPOO.Ejercicio5;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Domiciliacion {
     private int num_d;
-    private String nombre;
-    private List<CuentaCorriente> cuentaCorriente;
+    private String concepto;
+    private double cantidad;
+    private Cuenta_Corriente cuenta_Corriente;
 
-    public Domiciliacion(int num_d, String nombre) {
+    public Domiciliacion(int num_d, Cuenta_Corriente cuenta_Corriente) {
         this.num_d = num_d;
-        this.nombre = nombre;
-        this.cuentaCorriente = new ArrayList<>();
+        this.cuenta_Corriente = cuenta_Corriente;
     }
 
     public int getNum_d() {
         return num_d;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setNum_d(int num_d) {
+        this.num_d = num_d;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public String getConcepto() {
+        return concepto;
     }
 
-    public List<CuentaCorriente> getCuentaCorriente() {
-        return cuentaCorriente;
+    public void setConcepto(String concepto) {
+        this.concepto = concepto;
     }
-    public void addCuentaCorriente(CuentaCorriente cuentaCorriente) {
-        this.cuentaCorriente.add(cuentaCorriente);
+
+    public Cuenta_Corriente getCuenta_Corriente() {
+        return cuenta_Corriente;
+    }
+
+    public double getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(double cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setCuenta_Corriente(Cuenta_Corriente cuenta_Corriente) {
+        this.cuenta_Corriente = cuenta_Corriente;
     }
 
     @Override
     public String toString() {
-        return this.num_d + " - " + this.nombre;
+        return "Domiciliación: " + num_d + ", " + concepto + ", CC - " + cuenta_Corriente;
     }
 }

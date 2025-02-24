@@ -3,7 +3,7 @@ package herencia;
 public class MainAnimal {
     public static void main(String[] args) {
 //        Animal animal = new Animal("Samuel");
-//        System.out.println(animal.getNombre());
+//        System.out.println(animal.getConcepto());
 //        animal.comunicarse();
 
         Perro perro = new Perro("Rufo");

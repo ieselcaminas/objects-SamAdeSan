@@ -36,8 +36,17 @@ public class Articulo {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
+
+    public Lote getLote() {
+        return lote;
+    }
+
+    public void setLote(Lote lote) {
+        this.lote = lote;
+    }
+
     @Override
-    public String toString() {
-        return this.n_art + " " + this.nombre + " " + this.precio;
+    public String toString(){
+        return this.n_art + " - " + this.nombre + " - " + this.precio;
     }
 }

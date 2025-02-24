@@ -8,7 +8,7 @@ public class Ornitorrinco extends Mamifero implements PonerHuevos {
     @Override
     public void comunicarse() {
 
-        System.out.println("Se comunica con burbujas");
+        System.out.println("Burbujeos");
 
     }
 

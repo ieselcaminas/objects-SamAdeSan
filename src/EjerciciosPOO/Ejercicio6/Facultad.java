@@ -1,20 +1,25 @@
 package EjerciciosPOO.Ejercicio6;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Facultad {
-    private int cod_fac;
+    private int n_fac;
     private String nombre;
+    private List<Catedra> catedras;
 
-    public Facultad(int cod_fac, String nombre) {
-        this.cod_fac = cod_fac;
+    public Facultad(int n_fac, String nombre) {
+        this.n_fac = n_fac;
         this.nombre = nombre;
+        this.catedras = new ArrayList<>();
     }
 
-    public int getCod_fac() {
-        return cod_fac;
+    public int getN_fac() {
+        return n_fac;
     }
 
-    public void setCod_fac(int cod_fac) {
-        this.cod_fac = cod_fac;
+    public void setN_fac(int n_fac) {
+        this.n_fac = n_fac;
     }
 
     public String getNombre() {
@@ -25,8 +30,11 @@ public class Facultad {
         this.nombre = nombre;
     }
 
-    @Override
-    public String toString() {
-        return this.cod_fac + " - " + this.nombre;
+    public List<Catedra> getCatedras() {
+        return catedras;
+    }
+
+    public void addCatedra(Catedra catedra){
+        this.catedras.add(catedra);
     }
 }

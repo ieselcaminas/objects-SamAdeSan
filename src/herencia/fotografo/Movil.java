@@ -17,6 +17,6 @@ public class Movil implements TomarFoto{
 
     @Override
     public void tomarFoto(){
-        System.out.println("Hago una foto con el móvil");
+        System.out.println("Foto con el móvil");
     }
 }

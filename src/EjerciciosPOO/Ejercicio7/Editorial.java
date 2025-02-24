@@ -4,22 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Editorial {
-    private int cod_ed;
+    private int cod_edi;
     private String nombre;
-    private List<Libro> libros;
-
-    public Editorial(int cod_ed, String nombre) {
-        this.cod_ed = cod_ed;
+    private List<Libro> libros = new ArrayList<>();
+    public Editorial(int cod_edi, String nombre) {
+        this.cod_edi = cod_edi;
         this.nombre = nombre;
-        this.libros = new ArrayList<>();
     }
 
-    public int getCod_ed() {
-        return cod_ed;
+    public int getCod_edi() {
+        return cod_edi;
     }
 
-    public void setCod_ed(int cod_ed) {
-        this.cod_ed = cod_ed;
+    public void setCod_edi(int cod_edi) {
+        this.cod_edi = cod_edi;
     }
 
     public String getNombre() {
@@ -29,14 +27,17 @@ public class Editorial {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+    public void addLibro(Libro libro){
+        this.libros.add(libro);
+    }
+
     public List<Libro> getLibros() {
         return libros;
     }
-    public void addLibro(Libro libro) {
-        this.libros.add(libro);
-    }
+
     @Override
-    public String toString() {
-        return this.cod_ed + " - " + this.nombre;
+    public String toString(){
+        return this.nombre;
     }
 }

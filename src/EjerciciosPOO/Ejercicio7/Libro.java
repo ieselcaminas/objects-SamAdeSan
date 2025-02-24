@@ -4,72 +4,64 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Libro {
-    private int isbn;
-    private String titulo;
-    private String desc;
-    private List<Autor> autores;
-    private Tema tema;
+    private int cod_lib;
+    private String nombre;
     private Editorial editorial;
-    private List<Ejemplar> ejemplar;
+    private List<Autor> autores = new ArrayList<>();;
+    private List<Tema> temas = new ArrayList<>();;
+    private List<Ejemplar> ejemplares = new ArrayList<>();;
 
-    public Libro(int isbn,String titulo, String desc, Tema tema, Editorial editorial) {
-        this.isbn = isbn;
-        this.titulo = titulo;
-        this.desc = desc;
-        this.autores = new ArrayList<>();
-        this.tema = tema;
+    public Libro(int cod_lib, String nombre, Editorial editorial) {
+        this.cod_lib = cod_lib;
+        this.nombre = nombre;
         this.editorial = editorial;
-        this.ejemplar = new ArrayList<>();
     }
 
-    public int getIsbn() {
-        return isbn;
+    public int getCod_lib() {
+        return cod_lib;
     }
 
-    public void setIsbn(int isbn) {
-        this.isbn = isbn;
+    public void setCod_lib(int cod_lib) {
+        this.cod_lib = cod_lib;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDesc() {
-        return desc;
-    }
-
-    public void setDesc(String desc) {
-        this.desc = desc;
-    }
-    public List<Autor> getAutor() {
-        return autores;
-    }
-
-    public void addAutor(Autor autor) {
-        this.autores.add(autor);
-    }
-
-    public Tema getTema() {
-        return tema;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Editorial getEditorial() {
         return editorial;
     }
 
-    public List<Ejemplar> getEjemplar() {
-        return ejemplar;
+    public void setEditorial(Editorial editorial) {
+        this.editorial = editorial;
     }
-    public void addEjemplar(Ejemplar ejemplar) {
-        this.ejemplar.add(ejemplar);
+
+    public List<Autor> getAutores() {
+        return autores;
+    }
+    public void addAutor(Autor autor){
+        this.autores.add(autor);
+    }
+
+    public List<Tema> getTemas() {
+        return temas;
+    }
+
+    public void addTema(Tema tema){
+        this.temas.add(tema);
+    }
+
+    public void addEjemplar(Ejemplar ejemplar){
+        this.ejemplares.add(ejemplar);
     }
 
     @Override
-    public String toString() {
-        return this.titulo + " - " + this.desc + " - " + this.autores;
+    public String toString(){
+        return this.nombre;
     }
 }

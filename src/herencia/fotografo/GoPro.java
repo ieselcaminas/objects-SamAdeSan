@@ -17,6 +17,6 @@ public class GoPro implements TomarFoto{
 
     @Override
     public void tomarFoto(){
-        System.out.println("Hago una foto con la GoPro");
+        System.out.println("Foto con la GoPro");
     }
 }

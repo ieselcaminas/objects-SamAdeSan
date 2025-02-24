@@ -2,11 +2,11 @@ package herencia.fotografo;
 
 public class Fotografo {
     private String nombre;
-    private TomarFoto aparatoQueTomaFoto;
+    private TomarFoto aparatoFoto;
 
     public Fotografo(String nombre, TomarFoto aparatoQueTomaFoto) {
         this.nombre = nombre;
-        this.aparatoQueTomaFoto = aparatoQueTomaFoto;
+        this.aparatoFoto = aparatoQueTomaFoto;
     }
 
 
@@ -19,14 +19,14 @@ public class Fotografo {
     }
 
     public TomarFoto getCamara() {
-        return aparatoQueTomaFoto;
+        return aparatoFoto;
     }
 
     public void setCamara(TomarFoto aparatoQueTomaFoto) {
-        this.aparatoQueTomaFoto = aparatoQueTomaFoto;
+        this.aparatoFoto = aparatoQueTomaFoto;
     }
 
     public void tomarFoto(){
-        this.aparatoQueTomaFoto.tomarFoto();
+        this.aparatoFoto.tomarFoto();
     }
 }
