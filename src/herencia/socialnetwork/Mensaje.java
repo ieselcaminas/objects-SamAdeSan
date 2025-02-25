@@ -5,7 +5,6 @@ public class Mensaje extends Publicacion{
     private String texto;
 
     public Mensaje(Usuario usuario, int id, String texto){
-        //Siempre hemos de llamar a un constructor de la clase padre
         super(usuario);
         this.id = id;
         this.texto = texto;
