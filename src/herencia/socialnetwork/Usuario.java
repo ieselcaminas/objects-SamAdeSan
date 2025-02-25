@@ -4,23 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Usuario{
-    private String nick;
+    private String nickname;
     private String nombre;
     private int id;
     private List<Publicacion> publicaciones = new ArrayList<>();
 
-    public Usuario(String nick, String nombre, int id) {
-        this.nick = nick;
+    public Usuario(String nickname, String nombre, int id) {
+        this.nickname = nickname;
         this.nombre = nombre;
         this.id = id;
     }
 
-    public String getNick() {
-        return nick;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setNick(String nick) {
-        this.nick = nick;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getNombre() {
@@ -42,13 +42,14 @@ public class Usuario{
     public List<Publicacion> getPublicaciones() {
         return publicaciones;
     }
+
     public void addPublicacion(Publicacion publicacion) {
         publicaciones.add(publicacion);
     }
 
     @Override
     public String toString(){
-        return this.id + " - " + this.nick;
+        return this.id + " - " + this.nickname;
     }
 
 }
